@@ -1,10 +1,11 @@
 # Real-Time Video Adaptation and QoE Management in 5G Networks
 
 ## Project Overview
+This project aims to implement the system from the paper [Real-Time Video Adaptation in Virtualised 5G Networks](https://ieeexplore.ieee.org/document/8990815) by Salva-Garcia et al.
 
-This project proposes the design and development of an intelligent, scalable video adaptation system for virtualized 5G networks. The system aims to enhance video Quality of Experience (QoE) by leveraging Software-Defined Networking (SDN) and Network Function Virtualization (NFV) techniques.
+The paper proposes the design and development of an intelligent, scalable video adaptation system for virtualized 5G networks. The system aims to enhance video Quality of Experience (QoE) by leveraging Software-Defined Networking (SDN) and Network Function Virtualization (NFV) techniques.
 
-We explore a **context-aware SDN control-plane** and **real-time video adaptation** based on the latest scalable H.265/HEVC codecs, focusing on maintaining low latency, high reliability, and network scalability under the 5G architecture.
+The paper explores a **context-aware SDN control-plane** and **real-time video adaptation** based on the latest scalable H.265/HEVC codecs, focusing on maintaining low latency, high reliability, and network scalability under the 5G architecture.
 
 ## Objectives
 
