@@ -71,9 +71,9 @@ We explore a **context-aware SDN control-plane** and **real-time video adaptatio
 
 ---
 
-Team 5:
-Hazilky Muna Putra M11302811
-Jalu Veda M11302824
+## Team 5:
+- Hazilky Muna Putra M11302811
+- Jalu Veda M11302824
 
 
 ---
