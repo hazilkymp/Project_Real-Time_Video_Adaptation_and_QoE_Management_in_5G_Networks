@@ -1,4 +1,4 @@
-Free5GC and UERANSIM
+Free5GC and UERANSIM Implementation test
 
 ![Screenshot 2025-05-06 105353](https://github.com/user-attachments/assets/237c32a7-f4d9-408e-947c-6457d801a9fb)
 
