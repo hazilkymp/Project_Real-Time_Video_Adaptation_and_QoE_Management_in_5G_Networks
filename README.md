@@ -7,6 +7,8 @@ The paper proposes the design and development of an intelligent, scalable video 
 
 The paper explores a **context-aware SDN control-plane** and **real-time video adaptation** based on the latest scalable H.265/HEVC codecs, focusing on maintaining low latency, high reliability, and network scalability under the 5G architecture.
 
+The implementation utilizes **free5GC**, an open-source 5G Core Network, alongside ***OpenAirInterface (OAI)** for the Radio Access Network (RAN), providing a realistic and comprehensive virtualized 5G testing environment. Additionally, **GNS3** is used to simulate complex network topologies, facilitating robust testing and performance analysis.
+
 ## Objectives
 
 - **Develop a Virtualized Video Adapter (vAdapter)**:
@@ -62,8 +64,8 @@ The paper explores a **context-aware SDN control-plane** and **real-time video a
 ## Target Deliverables
 
 - Simulation/Testbed Implementation in a virtualized 5G network.
+- Implementation within a virtualized 5G environment using free5GC, OpenAirInterface, and GNS3.
 - Benchmarking against current multimedia traffic engineering solutions.
-- Research paper and system documentation.
 
 ## References
 
