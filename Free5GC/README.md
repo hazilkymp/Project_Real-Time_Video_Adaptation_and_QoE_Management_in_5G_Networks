@@ -25,8 +25,8 @@
 
 ![Screenshot 2025-05-06 105342](https://github.com/user-attachments/assets/ffa19d0e-8d04-4bb0-9ac9-3cfeec5a8107)
 
-## Implementation
-### On Free5GC's VM:
+# Implementation
+## On Free5GC's VM:
 
 First Terminal:
 
@@ -40,7 +40,8 @@ Second terminal:
 
 `./run.sh`
 
-### On OpenAirInterface's VM
+
+## On OpenAirInterface's VM
 
 First Terminal
 
