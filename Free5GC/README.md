@@ -8,18 +8,19 @@
   - MongoDB 7.0
   - gtp5g 0.9.3
 
-- Open Air Interface
+- OpenAirInterface
   - Ubuntu 22.04 LTS
   - IP addres: 192.168.10.32
   - CU IP: 192.168.110.11
   - DU IP: 192.168.110.12 
 
+## SSH into Free5gc's VM
 ![Screenshot 2025-05-06 105353](https://github.com/user-attachments/assets/237c32a7-f4d9-408e-947c-6457d801a9fb)
 
 
 ![Screenshot 2025-05-06 105727](https://github.com/user-attachments/assets/2ea6dc8b-02b0-4717-86b2-021547b114f7)
 
-
+## SSH into OpenAirInterface's VM
 ![Screenshot 2025-05-06 105653](https://github.com/user-attachments/assets/27f810d0-f6c0-4267-b283-9c5841ae2092)
 
 
