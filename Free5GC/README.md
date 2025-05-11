@@ -27,5 +27,13 @@
 
 ## Implementation
 On Free5GC's VM:
+
 `cd ~/free5gc/webconsole`
+
 `go run server.go`
+
+On another terminal:
+
+`cd ~/free5gc`
+
+`./run.sh`
