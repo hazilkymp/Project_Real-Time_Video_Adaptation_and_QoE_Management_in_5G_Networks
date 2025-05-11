@@ -1,4 +1,4 @@
-# Free5GC and UERANSIM Implementation test
+# Free5GC, UERANSIM, and OpenAirInterface Implementation test
 
 ## System Environment Used
 - Free5GC 3.4.4
@@ -24,3 +24,8 @@
 ![Screenshot 2025-05-06 105653](https://github.com/user-attachments/assets/27f810d0-f6c0-4267-b283-9c5841ae2092)
 
 ![Screenshot 2025-05-06 105342](https://github.com/user-attachments/assets/ffa19d0e-8d04-4bb0-9ac9-3cfeec5a8107)
+
+## Implementation
+On Free5GC's VM:
+`cd ~/free5gc/webconsole`
+`go run server.go`
