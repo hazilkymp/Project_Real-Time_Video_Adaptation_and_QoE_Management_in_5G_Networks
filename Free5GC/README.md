@@ -26,14 +26,36 @@
 ![Screenshot 2025-05-06 105342](https://github.com/user-attachments/assets/ffa19d0e-8d04-4bb0-9ac9-3cfeec5a8107)
 
 ## Implementation
-On Free5GC's VM:
+### On Free5GC's VM:
+
+First Terminal:
 
 `cd ~/free5gc/webconsole`
 
 `go run server.go`
 
-On another terminal:
+Second terminal:
 
 `cd ~/free5gc`
 
 `./run.sh`
+
+### On OpenAirInterface's VM
+
+First Terminal
+
+`cd ~/openairinterface5g/cmake_targets/ran_build/build`
+
+`sudo RFSIMULATOR=server ./nr-softmodem --rfsim --sa -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/cu_gnb.conf`
+
+Second Terminal
+
+`cd ~/openairinterface5g/cmake_targets/ran_build/build`
+
+`sudo RFSIMULATOR=server ./nr-softmodem --rfsim --sa -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/cu_gnb.conf`
+
+Third Terminal
+
+`cd ~/openairinterface5g/cmake_targets/ran_build/build`
+
+`sudo RFSIMULATOR=server ./nr-softmodem --rfsim --sa -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/cu_gnb.conf`
