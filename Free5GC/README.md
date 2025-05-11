@@ -1,5 +1,19 @@
 # Free5GC and UERANSIM Implementation test
 
+## System Environment Used
+- Free5gc 3.4.4
+  - Ubuntu 20.04 LTS
+  - IP address: 192.168.10.31
+  - Golang 1.21.8
+  - MongoDB 7.0
+  - gtp5g 0.9.3
+
+- Open Air Interface
+  - Ubuntu 22.04 LTS
+  - IP addres: 192.168.10.32
+  - CU IP: 192.168.110.11
+  - DU IP: 192.168.110.12 
+
 ![Screenshot 2025-05-06 105353](https://github.com/user-attachments/assets/237c32a7-f4d9-408e-947c-6457d801a9fb)
 
 
