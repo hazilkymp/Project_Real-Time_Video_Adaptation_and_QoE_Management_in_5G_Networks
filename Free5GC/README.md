@@ -31,13 +31,11 @@
 First Terminal:
 ```
 cd ~/free5gc/webconsole
-
 go run server.go
 ```
 Second terminal:
 ```
 cd ~/free5gc
-
 ./run.sh
 ```
 
@@ -46,18 +44,15 @@ cd ~/free5gc
 First Terminal
 ```
 cd ~/openairinterface5g/cmake_targets/ran_build/build
-
 sudo RFSIMULATOR=server ./nr-softmodem --rfsim --sa -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/cu_gnb.conf
 ```
 Second Terminal
 ```
 cd ~/openairinterface5g/cmake_targets/ran_build/build
-
 sudo RFSIMULATOR=server ./nr-softmodem --rfsim --sa -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/du_gnb.conf
 ```
 Third Terminal
 ```
 cd ~/openairinterface5g/cmake_targets/ran_build/build
-
 sudo RFSIMULATOR=127.0.0.1 ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --rfsim --sa --nokrnmod -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/ue.conf
 ```
