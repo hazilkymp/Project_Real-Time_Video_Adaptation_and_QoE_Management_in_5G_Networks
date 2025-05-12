@@ -22,3 +22,12 @@ The vAdapter is a core component that needs to parse and adapt video traffic:
 3. Deploy vAdapter as a VNF:
      - Create a containerized version of vAdapter
      - Configure it to be deployed dynamically
+
+# Phase 4: Testing and Benchmarking
+1. Generate test traffic:
+     - Create scripts to simulate various video streaming scenarios
+     - Vary the number of concurrent streams and network conditions
+2. Measure and compare:
+     - Benchmark bandwidth usage with and without adaptation
+     - Measure latency under different load conditions
+     - Evaluate QoE metrics (PSNR, SSIM, etc.)
