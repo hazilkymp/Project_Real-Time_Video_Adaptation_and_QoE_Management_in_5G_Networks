@@ -8,5 +8,17 @@ The vAdapter is a core component that needs to parse and adapt video traffic:
 
 # Phase 2: Context-Aware QoE Management Framework
 1. Create the Video Quality Assurance Manager (VQAM):
-     Develop monitoring components for network conditions
-     Implement metrics collection for video streams
+     - Develop monitoring components for network conditions
+     - Implement metrics collection for video streams
+2. Implement the SDN Video Quality Orchestrator (SDN-VQO):
+     - Integrate with the Free5GC control plane
+     - Develop decision logic for adaptation
+
+# Phase 3: SDN and NFV Integration
+1. Setup a lightweight SDN controller compatible with Free5GC
+2. Implement SDN applications for traffic management:
+     - Create custom modules for path management
+     - Develop interfaces between vAdapter and SDN controller
+3. Deploy vAdapter as a VNF:
+     - Create a containerized version of vAdapter
+     - Configure it to be deployed dynamically
