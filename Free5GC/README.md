@@ -29,34 +29,35 @@
 ## On Free5GC's VM:
 
 First Terminal:
+```
+cd ~/free5gc/webconsole
 
-`cd ~/free5gc/webconsole`
-
-`go run server.go`
-
+go run server.go
+```
 Second terminal:
+```
+cd ~/free5gc
 
-`cd ~/free5gc`
-
-`./run.sh`
-
+./run.sh
+```
 
 ## On OpenAirInterface's VM
 
 First Terminal
+```
+cd ~/openairinterface5g/cmake_targets/ran_build/build
 
-`cd ~/openairinterface5g/cmake_targets/ran_build/build`
-
-`sudo RFSIMULATOR=server ./nr-softmodem --rfsim --sa -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/cu_gnb.conf`
-
+sudo RFSIMULATOR=server ./nr-softmodem --rfsim --sa -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/cu_gnb.conf
+```
 Second Terminal
+```
+cd ~/openairinterface5g/cmake_targets/ran_build/build
 
-`cd ~/openairinterface5g/cmake_targets/ran_build/build`
-
-`sudo RFSIMULATOR=server ./nr-softmodem --rfsim --sa -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/cu_gnb.conf`
-
+sudo RFSIMULATOR=server ./nr-softmodem --rfsim --sa -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/du_gnb.conf
+```
 Third Terminal
+```
+cd ~/openairinterface5g/cmake_targets/ran_build/build
 
-`cd ~/openairinterface5g/cmake_targets/ran_build/build`
-
-`sudo RFSIMULATOR=server ./nr-softmodem --rfsim --sa -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/cu_gnb.conf`
+sudo RFSIMULATOR=127.0.0.1 ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --rfsim --sa --nokrnmod -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/ue.conf
+```
