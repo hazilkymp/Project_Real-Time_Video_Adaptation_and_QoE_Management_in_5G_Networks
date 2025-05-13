@@ -18,7 +18,7 @@
 ![Screenshot 2025-05-06 105353](https://github.com/user-attachments/assets/237c32a7-f4d9-408e-947c-6457d801a9fb)
 
 ## SSH into OpenAirInterface's VM
-![Screenshot 2025-05-06 105727](https://github.com/user-attachments/assets/2ea6dc8b-02b0-4717-86b2-021547b114f7)
+![Screenshot 2025-05-13 161347](https://github.com/user-attachments/assets/24bc3ebd-e752-4c21-aea5-6c690ec4843a)
 
 ## Free5GC's Web Console
 ![Screenshot 2025-05-06 105653](https://github.com/user-attachments/assets/27f810d0-f6c0-4267-b283-9c5841ae2092)
