@@ -27,7 +27,12 @@
 
 # Implementation
 ## On Free5GC's VM:
-
+If the VM is restarted:
+```
+sudo sysctl -w net.ipv4.ip_forward=1
+sudo iptables -t nat -A POSTROUTING -o enp0s3 -j MASQUERADE
+sudo systemctl stop ufw
+```
 First Terminal:
 ```
 cd ~/free5gc/webconsole
