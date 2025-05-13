@@ -3,14 +3,14 @@
 ## System Environment Used
 - Free5GC 3.4.4
   - Ubuntu 20.04 LTS
-  - IP address: 192.168.10.31
+  - IP address: 192.168.56.105
   - Golang 1.21.8
   - MongoDB 7.0
   - gtp5g 0.9.3
 
 - OpenAirInterface
   - Ubuntu 22.04 LTS
-  - IP addres: 192.168.10.32
+  - IP addres: 192.168.56.106
   - CU IP: 192.168.110.11
   - DU IP: 192.168.110.12 
 
