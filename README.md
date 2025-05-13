@@ -71,6 +71,7 @@ The implementation utilizes **free5GC**, an open-source 5G Core Network, alongsi
 
 - Real-Time Video Adaptation in Virtualised 5G Networks (Salva-Garcia et al.)
 - Video Quality in 5G Networks: Context-Aware QoE Management in SDN (Awobuluyi et al.)
+- [Free5GC and Openairinterface Integration](https://hackmd.io/@Hazilkymp/S1QAH3piJx)
 
 ---
 
