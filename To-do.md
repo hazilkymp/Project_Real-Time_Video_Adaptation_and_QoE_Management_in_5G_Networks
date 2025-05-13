@@ -30,4 +30,3 @@ The vAdapter is a core component that needs to parse and adapt video traffic:
 2. Measure and compare:
      - Benchmark bandwidth usage with and without adaptation
      - Measure latency under different load conditions
-     - Evaluate QoE metrics (PSNR, SSIM, etc.)
