@@ -1,6 +1,18 @@
 ## Virtual Machines Setup [Success]
-![image](https://github.com/user-attachments/assets/43900d4f-2476-4e73-a4b1-b123b9b9f436)
 
+![image](https://github.com/user-attachments/assets/43900d4f-2476-4e73-a4b1-b123b9b9f436)
+Free5gc 3.4.4
+    192.168.10.31
+    Ubuntu 20.04.4 LTS
+    Golang 1.21.8
+    MongoDB 7.0/4.4
+    gtp5g 0.9.3
+
+OAI
+    Ubuntu 22.04 LTS
+    192.168.10.32
+    CU IP: 192.168.110.11
+    DU IP: 192.168.110.12
 
 ## AMF Setup on Free5GC [Success]
 ![amf](https://github.com/user-attachments/assets/48d5e2c5-a8c6-429e-9dc6-ad2b1a51ec5d)
