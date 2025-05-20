@@ -35,13 +35,7 @@ The implementation utilizes **free5GC**, an open-source 5G Core Network, alongsi
 
 ## Proposed Architecture
 
-[UE] ↔ [gNB/OpenAirInterface] ↔ [5G Core/free5gc] ↔ [Internet/Content Server]
-                                        ↑
-                                   [vAdapter] (packet inspection & adaptation)
-                                        ↓
-                                    [VQAM] (quality monitoring)
-                                        ↓
-                                   [SDN-VQO] (orchestration)
+![image](https://github.com/user-attachments/assets/146f60d3-99cb-4727-9d5c-7407cffe6493)
 
 ### 1. vAdapter Design
 - Built as a VNF for easy deployment.
