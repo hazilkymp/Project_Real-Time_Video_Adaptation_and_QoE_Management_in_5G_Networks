@@ -7,8 +7,8 @@
 ## UE is able to connect to the internet
 ![ping ue success](https://github.com/user-attachments/assets/572e774b-60c8-4a49-b36b-6f24b35342a1)
 
-## Free5GC Webconsole
+## UE registered to the 5G core network
 <img width="960" alt="web ui" src="https://github.com/user-attachments/assets/0ad9c89d-0196-491a-a492-f96c08083a4f" />
 
-## UE registered to the 5G core network
+## UE Data
 <img width="960" alt="ue data" src="https://github.com/user-attachments/assets/4bd9f2b7-b90f-47e0-bc5f-664339d2397b" />
