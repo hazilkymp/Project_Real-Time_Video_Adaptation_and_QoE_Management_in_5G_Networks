@@ -35,7 +35,7 @@ The implementation utilizes **free5GC**, an open-source 5G Core Network, alongsi
 
 ## Proposed Architecture
 
-![image](https://github.com/user-attachments/assets/146f60d3-99cb-4727-9d5c-7407cffe6493)
+![image](https://github.com/user-attachments/assets/9c8bf556-8c4b-4a10-a241-54b80a04d1f5)
 
 ### 1. vAdapter Design
 - Built as a VNF for easy deployment.
