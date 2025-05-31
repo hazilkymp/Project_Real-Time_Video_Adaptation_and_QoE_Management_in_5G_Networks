@@ -10,7 +10,7 @@
 
 - OpenAirInterface
   - Ubuntu 22.04 LTS
-  - IP addres: 192.168.56.106
+  - IP addres: 192.168.56.108
   - CU IP: 192.168.110.11
   - DU IP: 192.168.110.12 
 
