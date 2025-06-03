@@ -7,7 +7,7 @@ The paper proposes the design and development of an intelligent, scalable video 
 
 The paper explores a **context-aware SDN control-plane** and **real-time video adaptation** based on the latest scalable H.265/HEVC codecs, focusing on maintaining low latency, high reliability, and network scalability under the 5G architecture.
 
-The implementation utilizes **free5GC**, an open-source 5G Core Network, alongside **OpenAirInterface (OAI)** for the Radio Access Network (RAN), providing a realistic and comprehensive virtualized 5G testing environment. Additionally, **GNS3** is used to simulate complex network topologies, facilitating robust testing and performance analysis.
+The implementation utilizes **free5GC**, an open-source 5G Core Network, alongside **OpenAirInterface (OAI)** for the Radio Access Network (RAN), providing a realistic and comprehensive virtualized 5G testing environment.
 
 ## Objectives
 
@@ -24,13 +24,13 @@ The implementation utilizes **free5GC**, an open-source 5G Core Network, alongsi
   - Ensure dynamic and scalable deployment.
 
 - **Optimize Video Traffic for 5G Environments**:
-  - Manage massive numbers of real-time video streams.
-  - Dynamically adapt streams based on network conditions to save bandwidth.
+  - Manage various numbers of real-time video streams.
+  - Adapt streams based on packet compression to save bandwidth.
 
 ## Background Motivation
 
 - **Explosion of Multimedia Traffic**: Video accounts for 75% of mobile data traffic.
-- **Challenges in 5G**: Massive device connections, UHD video demand, and ultra-low latency requirements.
+- **Challenges in 5G**: Massive device connections, FHD video demand, and ultra-low latency requirements.
 - **Limitations of Traditional Video Tools**: Existing tools are not optimized for virtualized 5G networks or new codecs like H.265/HEVC.
 
 ## Proposed Architecture
@@ -43,7 +43,7 @@ The implementation utilizes **free5GC**, an open-source 5G Core Network, alongsi
 - Parses RTP streams with H.265 scalable layers.
 
 ### 2. Virtualized 5G Infrastructure
-- LTE-based core fully virtualized with OpenStack + OpenDayLight SDN controller.
+- 5G core fully virtualized with Free5gc.
 - Multi-tenant setup using VLAN/VXLAN encapsulation.
 - Real-time monitoring of network conditions and video flows.
 
@@ -66,7 +66,7 @@ The implementation utilizes **free5GC**, an open-source 5G Core Network, alongsi
 ## Target Deliverables
 
 - Simulation/Testbed Implementation in a virtualized 5G network.
-- Implementation within a virtualized 5G environment using free5GC, OpenAirInterface, and GNS3.
+- Implementation within a virtualized 5G environment using free5GC, OpenAirInterface and vadapter network function.
 - Benchmarking against current multimedia traffic engineering solutions.
 
 ## References
@@ -93,53 +93,53 @@ This guide will help you deploy a complete 5G video adaptation system that demon
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                    Windows 11 Host                             │
-│                   (192.168.56.1)                              │
-│  ┌─────────────────────────────────────────────────────────┐   │
-│  │ 🎬 HLS Streaming Server                                │   │
-│  │ • H.264/H.265 Content Generation                       │   │
-│  │ • Multiple Quality Profiles (240p-1080p)              │   │
-│  │ • Web Dashboard: Port 8888                            │   │
-│  │ • HLS Delivery: Port 8889                             │   │
-│  └─────────────────────────────────────────────────────────┘   │
+│                    Windows 11 Host                              │
+│                   (192.168.56.1)                                │
+│  ┌──────────────────────────────────────────────────────────┐   │
+│  │ 🎬 HLS Streaming Server                                  │   │
+│  │ • H.264/H.265 Content Generation                         │   │
+│  │ • Multiple Quality Profiles (240p-1080p)                 │   │
+│  │ • Web Dashboard: Port 8888                               │   │
+│  │ • HLS Delivery: Port 8889                                │   │
+│  └──────────────────────────────────────────────────────────┘   │
 └─────────────────────────┬───────────────────────────────────────┘
                           │ NAT Network (VirtualBox)
                           │
 ┌─────────────────────────▼───────────────────────────────────────┐
-│                   Free5GC VM                                   │
-│                 (192.168.56.105)                              │
-│  ┌─────────────────────────────────────────────────────────┐   │
-│  │ 📡 5G Core Network                                     │   │
-│  │ • AMF/SMF/UPF Components                              │   │
-│  │ • Web Console: Port 5000                              │   │
-│  │ • Traffic Routing & Management                         │   │
-│  └─────────────────────────────────────────────────────────┘   │
+│                   Free5GC VM                                    │
+│                 (192.168.56.10)                                 │
+│  ┌──────────────────────────────────────────────────────────┐   │
+│  │ 📡 5G Core Network                                       │   │
+│  │ • AMF/SMF/UPF Components                                 │   │
+│  │ • Web Console: Port 5000                                 │   │
+│  │ • Traffic Routing & Management                           │   │
+│  └──────────────────────────────────────────────────────────┘   │
 └─────────────────────────┬───────────────────────────────────────┘
                           │ 5G Core Traffic
                           │
 ┌─────────────────────────▼───────────────────────────────────────┐
-│               OpenAirInterface VM                              │
-│                 (192.168.56.108)                              │
-│  ┌─────────────────┐  ┌─────────────────┐  ┌────────────────┐  │
-│  │ 🛡️ vAdapter     │  │ 📊 CU Control   │  │ 📡 DU Data    │  │
-│  │ • Traffic Mon   │  │ 192.168.110.11  │  │ 192.168.110.12│  │
-│  │ • Adaptation    │  │ • Control Plane │  │ • Data Plane   │  │
-│  │ • Web UI: 8090  │  │ • RRC/PDCP      │  │ • PHY/MAC/RLC  │  │
-│  └─────────────────┘  └─────────────────┘  └────────────────┘  │
+│               OpenAirInterface VM                               │
+│                 (192.168.56.108)                                │
+│  ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐  │
+│  │ 🛡️ vAdapter     │  │ 📊 CU Control   │  │ 📡 DU Data     │  │
+│  │ • Traffic Mon   │  │ 192.168.110.11  │  │ 192.168.110.12  │  │
+│  │ • Adaptation    │  │ • Control Plane │  │ • Data Plane    │  │
+│  │ • Web UI: 8090  │  │ • RRC/PDCP      │  │ • PHY/MAC/RLC   │  │
+│  └─────────────────┘  └─────────────────┘  └─────────────────┘  │
 └─────────────────────────┬───────────────────────────────────────┘
                           │ 5G Radio Simulation (RFSim)
                           │
 ┌─────────────────────────▼───────────────────────────────────────┐
-│                      UE VM                                     │
-│                  (192.168.10.xx)                              │
-│  ┌─────────────────────────────────────────────────────────┐   │
-│  │ 📱 UE Video Client                                     │   │
-│  │ • Video Player (FFplay/VLC/MPV)                        │   │
-│  │ • QoE Measurement & Analytics                          │   │
-│  │ • Real-time Metrics Collection                         │   │
-│  │ • Web Dashboard: Port 8091                            │   │
-│  └─────────────────────────────────────────────────────────┘   │
-└───────────────────────────────────────────────────────────────┘
+│                      UE VM                                      │
+│                  (192.168.10.xx)                                │
+│    ┌────────────────────────────────────────────────────────┐   │
+│    │ 📱 UE Video Client                                     │   │
+│    │ • Video Player (FFplay/VLC/MPV)                        │   │
+│    │ • QoE Measurement & Analytics                          │   │
+│    │ • Real-time Metrics Collection                         │   │
+│    │ • Web Dashboard: Port 8091                             │   │
+│    └────────────────────────────────────────────────────────┘   │
+└─────────────────────────────────────────────────────────────────┘
 ```
 
 ### 🔄 Traffic Flow & Adaptation Process
@@ -575,7 +575,7 @@ sudo RFSIMULATOR=127.0.0.1 ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3
 **Check all components are running:**
 
 1. **Windows Streaming Server**: `http://192.168.56.1:8888`
-2. **Free5GC Web Console**: `http://192.168.56.105:5000`
+2. **Free5GC Web Console**: `http://192.168.56.107:5000`
 3. **vAdapter Dashboard**: `http://192.168.56.108:8090`
 4. **UE Video Client**: `http://192.168.10.xx:8091`
 
@@ -627,17 +627,17 @@ sudo RFSIMULATOR=127.0.0.1 ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3
 **Test Scenario 1: Codec Comparison**
 | Test | Codec | Quality | vAdapter | Expected Bandwidth |
 |------|-------|---------|----------|-------------------|
-| 1 | H.264 | 720p | OFF | ~1.5 Mbps |
-| 2 | H.265 | 720p | OFF | ~1.0 Mbps (-33%) |
-| 3 | H.264 | 720p | ON | ~0.8 Mbps (-47%) |
-| 4 | H.265 | 720p | ON | ~0.6 Mbps (-60%) |
+|  1   | H.264 |  720p   |   OFF    | ~1.5 Mbps         |
+|  2   | H.265 |  720p   |   OFF    | ~1.0 Mbps (-33%)  |
+|  3   | H.264 |  720p   |   ON     | ~0.8 Mbps (-47%)  |
+|  4   | H.265 |  720p   |   ON     | ~0.6 Mbps (-60%)  |
 
 **Test Scenario 2: Adaptation Modes**
-| Mode | Target BW | Adaptation Strategy | Quality Impact |
-|------|-----------|-------------------|----------------|
-| Conservative | 1000 KB/s | Minimal changes | <5% degradation |
-| Moderate | 800 KB/s | Balanced approach | 5-15% degradation |
-| Aggressive | 500 KB/s | Maximum savings | 15-30% degradation |
+| Mode         | Target BW | Adaptation Strategy |   Quality Impact   |
+|--------------|-----------|---------------------|--------------------|
+| Conservative | 1000 KB/s | Minimal changes     | <5% degradation    |
+| Moderate     | 800 KB/s  | Balanced approach   | 5-15% degradation  |
+| Aggressive   | 500 KB/s  | Maximum savings     | 15-30% degradation |
 
 **Test Scenario 3: Network Congestion Simulation**
 1. **Create artificial congestion:**
@@ -762,7 +762,7 @@ which go
 **Solutions:**
 ```bash
 # Check Free5GC subscriber configuration
-# Access: http://192.168.56.105:5000
+# Access: http://192.168.56.107:5000
 # Verify IMSI: 2089300007487
 # Verify Key and OPc values match
 
@@ -771,7 +771,7 @@ nano ~/openairinterface5g/targets/PROJECTS/GENERIC-NR-5GC/CONF/ue.conf
 # Verify uicc0 settings match Free5GC
 
 # Check network connectivity
-ping 192.168.56.105  # Free5GC
+ping 192.168.56.107  # Free5GC
 ping 192.168.56.108  # OAI
 
 # Restart OAI components in order:
